@@ -53,6 +53,17 @@ When run, the user will control the player. They can use the arrow keys to move 
 
 ```
 
+* Collision Circle for Player
+
+* Shape of Player
+
+```csharp
+  public Circle PlayerCircle{
+
+        get { return SplashKit.CircleAt(X + Width / 2, Y + Height / 2, 60); }
+    }
+```
+
 ### Fly (Fly.cs)
 * FlyOne
 ```csharp
@@ -96,6 +107,15 @@ When run, the user will control the player. They can use the arrow keys to move 
         SplashKit.FillCircle(CirColor, rightX+10, Y+40, 4);
 ```
 
+* Collision Circle for Fly
+```csharp
+   public Circle FlyCircle{
+
+        get { return SplashKit.CircleAt(X + Width / 2, Y + Height / 2, 40); }
+    }
+```
+
+
 
 ### Bullet (Bullet.cs)
 * Single Bullet
@@ -111,10 +131,57 @@ SplashKit.FillTriangle(Color.Red, X-35, Y, X - 25, Y, X-30, Y-10);
         SplashKit.FillTriangle(Color.Red, X+35, Y, X + 45, Y, X+40, Y-10);
 ```
 
+* Collision Circle for Bullet
+
+Single Bullet
+```csharp
+    public Circle SingleBulletCircle{
+
+        get { return SplashKit.CircleAt(X, Y, 5); }
+    }
+```
+
+Double Bullet
+```csharp
+    public Circle DoubleBulletCircleLeft{
+
+        get { return SplashKit.CircleAt(X-40, Y, 5); }
+    }
+
+    public Circle DoubleBulletCircleRight{
+
+        get { return SplashKit.CircleAt(X+40, Y, 5); }
+    }
+```
+
+
 
 ### SkyAttack (SkyAttack.cs)
 The SkyAttack class will be used to create an object that plays
 the role of the game itself. It will keep track of the player, the flies, and the bullets.
 It will need access to the SplashKitSDK namespace.
+
+
+### CollidedWith Method
+
+We need to check when the player collides with the fly or the bullet collides with the fly, we create a new fly.
+
+* Player
+```csharp
+public bool CollidedWith(Fly other){
+
+        return SplashKit.CirclesIntersect(PlayerCircle, other.FlyCircle);
+    }
+```
+* Single Bullet
+```csharp
+     public override bool CollideWith (Fly other){
+        return SplashKit.CirclesIntersect(SingleBulletCircle, other.FlyCircle);
+    }```
+* Double Bullet
+```csharp
+public override bool CollideWith (Fly other){
+        return SplashKit.CirclesIntersect(DoubleBulletCircleLeft, other.FlyCircle) || SplashKit.CirclesIntersect(DoubleBulletCircleRight, other.FlyCircle) ;
+    }```
 
 
