@@ -1,3 +1,6 @@
+# Sky Attack Game Project
+
+
 ---
 
 title: How to make a game with C# and SplashKit
@@ -21,6 +24,5 @@ related_funcs:
 
 ---
 
-# <h1> Sky Attack game project
 
-
+## 
