@@ -28,8 +28,7 @@ related_funcs:
 ## Description
 
 The Sky Attack game will have a player, represented by a group of shapes on the screen, that can move UP, DOWN, LEFT and RIGHT. 
-
-
+![Sky Attack Screen](/images/SkyAttack.png)
 
 Figure: End game for Sky Attack
 When run, the user will control the player. They can use the arrow keys to move the player around on the screen and use Space key to shoot bullets to destroy the flies that appear from the top of the screen. Each time the player is hit by a robot, the fly will disappear, and the player will lose one life. The player will start with 10 lives, so the game is over when they have been hit by ten Flies.
