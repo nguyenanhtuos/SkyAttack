@@ -33,8 +33,9 @@ Figure: End game for Sky Attack
 When run, the user will control the player. They can use the arrow keys to move the player around on the screen and use Space key to shoot bullets to destroy the flies that appear from the top of the screen. Each time the player is hit by a robot, the fly will disappear, and the player will lose one life. The player will start with 10 lives, so the game is over when they have been hit by ten Flies.
 
 ### Player (Player.cs)
+The Player class contains Draw(), HandleInput() and StayOnWindow(). The Draw() method will draw the shape of the player. The  HandleInput() method will check if any of the arrow keys are held down, and will move the player by changing its X and Y location in response to these events. The StayOnWindow() method will keep the Player on the screen.
 
-* Shape of Player
+* Draw() method
 
 ```csharp
         double leftX = X + 40;
@@ -54,8 +55,6 @@ When run, the user will control the player. They can use the arrow keys to move 
 ```
 
 * Collision Circle for Player
-
-* Shape of Player
 
 ```csharp
   public Circle PlayerCircle{
