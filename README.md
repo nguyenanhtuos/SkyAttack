@@ -65,6 +65,8 @@ When run, the user will control the player. They can use the arrow keys to move 
 ```
 
 ### Fly (Fly.cs)
+We create a Fly class which is an abstract class and this class will have three child classes.
+
 * FlyOne
 ```csharp
         double leftX = X + 20;
@@ -118,6 +120,8 @@ When run, the user will control the player. They can use the arrow keys to move 
 
 
 ### Bullet (Bullet.cs)
+Bullet class is an abstract class as well and it will have two child classes include SingleBullet and DoubleBullet class.
+
 * Single Bullet
 
 ```csharp
