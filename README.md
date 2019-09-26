@@ -165,7 +165,6 @@ It will need access to the SplashKitSDK namespace.
 ### CollidedWith Method
 
 We need to check when the player collides with the fly or the bullet collides with the fly, we create a new fly.
-
 * Player
 ```csharp
 public bool CollidedWith(Fly other){
@@ -177,11 +176,13 @@ public bool CollidedWith(Fly other){
 ```csharp
      public override bool CollideWith (Fly other){
         return SplashKit.CirclesIntersect(SingleBulletCircle, other.FlyCircle);
-    }```
+    }
+```
 * Double Bullet
 ```csharp
 public override bool CollideWith (Fly other){
         return SplashKit.CirclesIntersect(DoubleBulletCircleLeft, other.FlyCircle) || SplashKit.CirclesIntersect(DoubleBulletCircleRight, other.FlyCircle) ;
-    }```
+    }
+```
 
 
