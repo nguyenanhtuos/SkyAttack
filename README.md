@@ -1,5 +1,3 @@
-
-
 ---
 
 title: How to make a game with C# and SplashKit
@@ -36,7 +34,7 @@ When run, the user will control the player. They can use the arrow keys to move 
 
 ### Player (Player.cs)
 
-* Item 1 Draw Method
+* Shape of Player
 
 ```csharp
         double leftX = X + 40;
@@ -56,7 +54,7 @@ When run, the user will control the player. They can use the arrow keys to move 
 ```
 
 ### Fly (Fly.cs)
-* Item 1 FlyOne
+* FlyOne
 ```csharp
         double leftX = X + 20;
         double rightX = X + 60;
@@ -77,7 +75,7 @@ When run, the user will control the player. They can use the arrow keys to move 
         SplashKit.FillCircle(CirColor, rightX+10, Y+40, 4);
 ```
 
-* Item 2 FlyTwo
+* FlyTwo
 ```csharp
         double leftX = X + 20;
         double rightX = X + 60;
@@ -100,13 +98,13 @@ When run, the user will control the player. They can use the arrow keys to move 
 
 
 ### Bullet (Bullet.cs)
-* Item 1 Single Bullet
+* Single Bullet
 
 ```csharp
 SplashKit.FillTriangle(Color.Red, X-5, Y,X + 5, Y, X, Y-10);
 ```
 
-* Item 1 Double Bullet
+* Double Bullet
 
 ```csharp
 SplashKit.FillTriangle(Color.Red, X-35, Y, X - 25, Y, X-30, Y-10);
@@ -115,8 +113,8 @@ SplashKit.FillTriangle(Color.Red, X-35, Y, X - 25, Y, X-30, Y-10);
 
 
 ### SkyAttack (SkyAttack.cs)
-
-
-
+The SkyAttack class will be used to create an object that plays
+the role of the game itself. It will keep track of the player, the flies, and the bullets.
+It will need access to the SplashKitSDK namespace.
 
 
