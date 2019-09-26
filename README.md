@@ -29,7 +29,7 @@ related_funcs:
 
 The Sky Attack game will have a player, represented by a group of shapes on the screen, that can move UP, DOWN, LEFT and RIGHT.
 
-![Sky Attack Screen](/images/SkyAttack.png width=300)
+![Sky Attack Screen](/images/SkyAttack.png 300)
 
 Figure: End game for Sky Attack
 
